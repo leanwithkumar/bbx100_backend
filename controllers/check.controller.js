@@ -1,4 +1,4 @@
-export const checkthis = ()=>{
+export const checkthis = (req, res)=>{
     try{
         res.status(200).json({
             message : "backend is working"
