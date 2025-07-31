@@ -3,6 +3,7 @@ import { signin } from "../controllers/signin.controller.js"
 
 const signinroute = express.Router()
 
-signinroute.get('/google',signin )
+// Change GET to POST
+signinroute.post('/google', signin)
 
 export default signinroute

@@ -15,6 +15,8 @@ app.use(cors({
   origin: ["http://localhost:5173", "https://billboardx100.vercel.app"],
   credentials: true
 }));
+app.use(express.json());
+
 
 app.use('/auth', signinroute)
 app.use('/users', usercount)
