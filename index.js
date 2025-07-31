@@ -11,7 +11,11 @@ import usercount from "./routes/userscount.route.js"
 const app = express()
 const port = process.env.PORT
 
-app.use(cors())
+app.use(cors({
+  origin: ["http://localhost:5173", "https://billboardx100.vercel.app"],
+  credentials: true
+}));
+
 app.use('/auth', signinroute)
 app.use('/users', usercount)
 
