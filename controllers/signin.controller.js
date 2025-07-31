@@ -5,6 +5,8 @@ import jwt from "jsonwebtoken"
 
 
 export const signin = async(req, res)=>{
+    console.log("Received Google Auth request");
+    console.log("Query or Body:", req.query, req.body);
     try{
         const {code} = req.query
         const googleRes = await oauth2client.getToken(code)
