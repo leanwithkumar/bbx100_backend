@@ -5,6 +5,7 @@ dotenv.config()
 import mongodbconnection from "./models/mongodbconnection.js"
 import signinroute from "./routes/signin.route.js"
 import usercount from "./routes/userscount.route.js"
+import check from "./routes/check.route.js"
 
 
 
@@ -20,6 +21,7 @@ app.use(express.json());
 
 app.use('/auth', signinroute)
 app.use('/users', usercount)
+app.use('/', check)
 
 
 
